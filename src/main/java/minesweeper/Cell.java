@@ -1,22 +1,23 @@
 package minesweeper;
 
 public class Cell {
-	private Boolean Covered;
-	private Boolean Flaged;
+	private Boolean IsCovered;
+	private Boolean IsFlaged;
 	private Integer MinesAround;
 	private String Type;
 
-	public Boolean getCovered() {
-		return Covered;
+
+	public Boolean getIsCovered() {
+		return IsCovered;
 	}
-	public void setCovered(Boolean covered) {
-		Covered = covered;
+	public void setIsCovered(Boolean IsCovered) {
+		this.IsCovered = IsCovered;
 	}
-	public Boolean getFlaged() {
-		return Flaged;
+	public Boolean getIsFlaged() {
+		return IsFlaged;
 	}
-	public void setFlaged(Boolean flaged) {
-		Flaged = flaged;
+	public void setIsFlaged(Boolean IsFlaged) {
+		this.IsFlaged = IsFlaged;
 	}
 	public Integer getMinesAround() {
 		return MinesAround;

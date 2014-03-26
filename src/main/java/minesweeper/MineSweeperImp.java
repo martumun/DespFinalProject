@@ -1,47 +1,50 @@
 package minesweeper;
 
-import com.despegar.highflight.utils.Matrix2DCellPosition;
-
 public class MineSweeperImp implements MineSweeper{
-	Matrix2DCellPosition matrix=new  Matrix2DCellPosition(6,6);
 	
+	Matrix matrix=new Matrix(4, 4);
 	public void uncover(int row, int col) {
-		// TODO Auto-generated method stub
-		
+		matrix.uncover(row, col);
+		matrix.Print();
 	}
 
 	public void flagAsMine(int row, int col) {
-		// TODO Auto-generated method stub
-		
+		matrix.Flag(row, col);	
+		matrix.Print();
 	}
 
 	public void clearFlag(int row, int col) {
-		// TODO Auto-generated method stub
+		Cell c=matrix.GetCell(row, col);
+		c.setIsFlaged(false);
+		matrix.Print();
 		
 	}
-
+	
+	public int GetRows(){
+		return matrix.GetNumRows();
+	}
+	
+	public int GetCol(){
+		return matrix.GetNumCol();
+	}
 	public boolean isGameOver() {
-		// TODO Auto-generated method stub
-		return false;
+		return matrix.GameOver();
 	}
 
 	public boolean isWinningGame() {
-		// TODO Auto-generated method stub
-		return false;
+		return matrix.HasWin();
 	}
 
 	public void display() {
-		// TODO Auto-generated method stub
-		
+		matrix.Print();
 	}
 
 	public void displayInternal() {
-		// TODO Auto-generated method stub
-		
+		matrix.PrintInternal();
 	}
 
 	public void displayRaw() {
-		// TODO Auto-generated method stub
+		matrix.PrintRaw();
 		
 	}
 
